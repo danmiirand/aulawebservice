@@ -20,7 +20,7 @@ import br.edu.ifgoias.academico.services.AlunoService;
 import br.edu.ifgoias.academico.services.CursoService;
 
 @RestController
-@RequestMapping(value = "/cursos")
+@RequestMapping(value = "/alunos")
 public class AlunoResource {
 	
 	@Autowired
