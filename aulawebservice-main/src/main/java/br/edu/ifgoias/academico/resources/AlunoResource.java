@@ -27,10 +27,10 @@ public class AlunoResource {
 	private AlunoService service;
 
 	@GetMapping
-	public ResponseEntity<List<Curso>> findAll(){
-		List<Aluno> alunos = service.findAll();
-		return ResponseEntity.ok().body(alunos);		
-	}
+    public ResponseEntity<List<Aluno>> findAll(){
+        List<Aluno> alunos = service.findAll();
+        return ResponseEntity.ok().body(alunos);
+    }
 	
 	@GetMapping (value = "/{id}")
 	public ResponseEntity<Aluno> findById(@PathVariable Integer id){
