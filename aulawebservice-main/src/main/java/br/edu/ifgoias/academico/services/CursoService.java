@@ -28,12 +28,12 @@ public class CursoService {
 		return cursoRepository.save(curso);
 	}
 
-	public void delete(Integer id) {
-		cursoRepository.findById(id).map(curso -> {
-			cursoRepository.delete(curso);
-			return Void.TYPE;
-		}).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-	}
+	public void delete (Integer id, Curso obj) {
+        repository.findById(id).map(
+                curso -> { curso.setNomecurso(obj.getNomecurso());
+                           return repository.save(curso);
+                         }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+    }
 
 	public void update(Integer id, Curso obj) {
 		cursoRepository.findById(id).map(curso -> {
