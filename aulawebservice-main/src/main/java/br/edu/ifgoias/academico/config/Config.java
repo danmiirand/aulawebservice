@@ -21,7 +21,7 @@ public class Config implements CommandLineRunner {
 		Aluno a2 = new Aluno(null, "Felipe", null, null);
 	   
 	    alunoRepository.save(a1);
-	    alunoRepository.save(a1);
+	    alunoRepository.save(a2);
 
 }
 }
